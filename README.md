@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Keycloak Kurulumu ve Spring Boot Entegrasyonu
 
 Bu belge, Keycloak kimlik ve erişim yönetimi sağlayıcısını nasıl kuracağınızı ve Spring Boot uygulamanızla nasıl entegre edeceğinizi adım adım açıklar.
@@ -19,23 +18,34 @@ Bu belge, Keycloak kimlik ve erişim yönetimi sağlayıcısını nasıl kuraca�
 
 ## Keycloak Ayarları
 
-1. Keycloak yönetim panelinde "Create realm" butonuna tıklayarak bir realm oluşturun.
-![Create Realm Ekran Görüntüsü](/home/b044/Desktop/createrealm.png)
+1. Keycloak yönetim panelinde "Create realm" butonuna tıklayarak " Demo " isminde  bir realm oluşturun. 
 
 2. Users alanına girip Add User diyerek yeni bir user oluşturun.
-![Create User Ekran Görüntüsü](/home/b044/Desktop/createuser.png)
-
+    ```
+    Username = demo
+    Email = demo@demo.com
+    First name = demo
+    Last name = demo
+    
 3. "Clients" menüsüne girip "Create client" ile yeni bir client oluşturun.
-![Create Client Ekran Görüntüsü](/home/b044/Desktop/createclient.png)
+
 3.a " General Settings " alanında Client ID kısmını dolduruyoruz.
-![Client ID Ekran Görüntüsü](/home/b044/Desktop/generalsettings.png)
+    
+    Client ID = Demo-Client
+
 3.b " Capability Config " alanında Client authentication butonunu aktif hale getiriyoruz.
-![Client Authentication Ekran Görüntüsü](/home/b044/Desktop/capabilityconfig.png)
-3.c " Login Settings " bölümünde "Valid redirect URLs" alanına projenizin çalıştığı URL'yi yazın ve "Web origins" alanında Cross origin belirtin.* işareti koyarak tüm makinelerin bağlanabileceğini belirtiyoruz.
-![Login Settings Ekran Görüntüsü](/home/b044/Desktop/loginsettings.png)
+
+3.c " Login Settings " bölümünde "Valid redirect URLs" alanına projenizin çalıştığı URL'yi yazın ve "Web origins" alanında Cross origin belirtin.
+
+(*) işareti koyarak tüm makinelerin bağlanabileceğini belirtiyoruz.
+
+    Valid redirected URIs = http://localhost:{port}
+
+    Web origins = * 
+
 
 4. Save dedikten sonra Credentials'a girip Client Secret alanını kopyalıyoruz.
-![Client Secret Ekran Görüntüsü](/home/b044/Desktop/clientsecret.png)
+
 
 
 
@@ -111,6 +121,3 @@ Bu belge, Keycloak kimlik ve erişim yönetimi sağlayıcısını nasıl kuraca�
 ## Yardımcı API
 
 Keycloak hakkında daha fazla bilgi için [resmi dokümantasyonu](https://www.keycloak.org/docs/latest) ziyaret edebilirsiniz.
-=======
-selam
->>>>>>> 8967974ef44094e86c05aefcdc860a0a139856cd
